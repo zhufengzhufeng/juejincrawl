@@ -33,6 +33,9 @@
                         <th>
                             点赞数
                         </th>
+                        <th>
+                            链接
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +53,9 @@
                             </td>
                             <td>
                                 <%=userInfo.totalCollectionsCount%>
+                            </td>
+                            <td>
+                                <a href="https://juejin.im/user/<%=userInfo.cart%>">查看</a>
                             </td>
                         </tr>
                         <% });%>

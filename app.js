@@ -10,8 +10,10 @@ app.get('/', function (req, res) {
         let users = JSON.parse(data);
         let userInfos = [];
         for (let uid in users) {
+            users[uid].cart = uid;
             userInfos.push(users[uid]);
         }
+        console.log(userInfos)
         userInfos.sort((a, b) => b.totalViewsCount - a.totalViewsCount);
         res.render('index', { userInfos });
     });
